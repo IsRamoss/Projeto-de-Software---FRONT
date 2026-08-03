@@ -63,76 +63,93 @@
 
 /* ===================================================================== */
 
-.h1 {
+h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 32px;
+    font-size: clamp(2rem, 2.8vw, 2.5rem);
+    /* 32px → 40px */
     font-weight: 700;
-    /* Bold */
-    line-height: 40px;
+    color: var(--text-primary);
 }
 
-.h2 {
+h2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 28px;
+    font-size: clamp(1.75rem, 2.2vw, 2rem);
+    /* 28px → 32px */
     font-weight: 600;
-    /* SemiBold */
-    line-height: 36px;
+    color: var(--text-primary);
 }
 
-.h3 {
+h3 {
     font-family: 'Poppins', sans-serif;
-    font-size: 24px;
+    font-size: clamp(1.5rem, 1.8vw, 1.75rem);
+    /* 24px → 28px */
     font-weight: 600;
-    /* SemiBold */
-    line-height: 32px;
+    color: var(--text-primary);
 }
 
 .title {
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: clamp(1.125rem, 1.4vw, 1.25rem);
+    /* 18px → 20px */
     font-weight: 600;
-    /* SemiBold */
-    line-height: 28px;
+    color: var(--text-primary);
 }
 
 .subtitle {
     font-family: 'Poppins', sans-serif;
-    font-size: 18px;
+    font-size: clamp(1rem, 1.2vw, 1.125rem);
+    /* 16px → 18px */
     font-weight: 500;
-    /* Medium */
-    line-height: 26px;
+    color: var(--text-primary);
 }
 
-.body {
+p {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: 400;
-    /* Regular */
-    line-height: 24px;
+    color: var(--text-primary);
 }
 
 .body-small {
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     font-weight: 400;
-    /* Regular */
-    line-height: 20px;
+    color: var(--text-primary);
 }
 
 .caption {
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
     font-weight: 500;
-    /* Medium */
-    line-height: 16px;
+    color: var(--text-primary);
 }
 
-.button {
+button {
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     font-weight: 600;
-    /* SemiBold */
-    line-height: 20px;
+    color: var(--text-primary);
+}
+
+.blue {
+    color: var(--blue);
+}
+
+.yellow {
+    color: var(--yellow)
+}
+
+.green {
+    color: var(--green)
+}
+
+.purple {
+    color: var(--purple);
+}
+
+
+.white {
+    color: var(--text-white);
 }
 
 /* ===================================================================== */
@@ -145,7 +162,7 @@ header-padrao {
     padding: 10px 24px;
     background-color: white;
 
-    .botoes {
+    .buttons {
         display: flex;
         gap: 10px;
         padding: 10px;
@@ -175,29 +192,29 @@ header-padrao {
 }
 
 .botao-largo {
-    padding: 12px 16px;
-    border-radius: 10px;
-    background-color: var(--purple-dark);
-    border: 0;
-    cursor: pointer;
-    transition: 0.3s;
     display: flex;
     align-items: center;
+    padding: 12px 16px;
     gap: 5px;
+    background-color: var(--purple-dark);
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
 
     p {
-        font-size: 16px;
-        font-family: 'Poppins';
-        font-weight: 600;
-        color: var(--text-white);
         margin: 0;
+        color: var(--text-white);
+        font-family: 'Poppins';
+        font-size: 16px;
+        font-weight: 600;
     }
 
     svg {
         height: 20px;
-        aspect-ratio: 1/1;
-        stroke-width: 2px;
+        aspect-ratio: 1 / 1;
         color: var(--text-white);
+        stroke-width: 2px;
     }
 }
 
@@ -209,6 +226,11 @@ header-padrao {
     display: flex;
     flex-flow: column;
     justify-content: center;
+}
+
+.line {
+    width: 100px;
+    height: 2px;
 }
 
 #vazio {
@@ -227,19 +249,165 @@ header-padrao {
 /* ===================================================================== */
 
 main {
+    position: relative;
     width: 100%;
+    aspect-ratio: 1440 / 615;
+    background-image: url("imgs/home/Main.png");
+    background-position: center;
+    background-size: cover;
 
-    container {
+    .container {
+        width: 100%;
+        height: 100%;
         padding: 30.75px 52.4px;
+    }
+
+    .col {
+        display: flex;
+        flex-flow: column;
+
+        width: min(100%, 520px);
+        height: 100%;
+        gap: 20px;
+    }
+
+    .text {
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 5px;
+    }
+
+    .buttons {
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .line {
+        background-color: var(--purple);
+        border-radius: 5px;
+    }
+
+    p,
+    svg,
+    h1 {
+        color: var(--text-white);
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    img {
+        display: block;
+
         width: 100%;
         height: 100%;
     }
 }
 
-main img {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    display: block;
-    z-index: -1;
+/* ===================================================================== */
+
+#funcionamento {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 30.75px 52.4px;
+    gap: 20px;
+
+    .top {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+
+        h3 {
+            color: var(--text-primary);
+        }
+
+        .line {
+            width: 100%;
+            background-color: var(--purple);
+            border-radius: 5px;
+        }
+    }
+
+    .steps {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+
+        .step {
+            width: fit-content;
+            text-align: center;
+
+            .circle {
+                display: inline-block;
+                width: clamp(60px, 10vw, 90px);
+                aspect-ratio: 1 / 1;
+                padding: 10px;
+
+                border-radius: 50%;
+
+                svg {
+                    width: 100%;
+                    height: 100%;
+                    aspect-ratio: 1 / 1;
+                    color: var(--purple-dark);
+                    stroke-width: 2px;
+
+                    use {
+                        stroke: currentColor;
+                        stroke-width: 2px;
+                    }
+                }
+
+                p {
+                    text-align: center;
+                }
+            }
+
+            .text {
+                width: min-content;
+
+                h3 {
+                    display: block;
+                    white-space: nowrap;
+                }
+
+                p {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+/* ===================================================================== */
+/* ===================================================================== */
+/* ===================================================================== */
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    h2 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    h3 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .title {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
 }

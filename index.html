@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
     <script src="Components/header.js"></script>
+    <script src="Components/step.js"></script>
 
 </head>
 
@@ -20,13 +21,16 @@
     <header-padrao></header-padrao>
 
     <main>
-        <img src="imgs/home/Main.png" alt="">
         <div class="container">
             <div class="col">
                 <div class="text">
-
+                    <h1>Acompanhe a <span class="blue">evolução da escrita</span> infantil com <span
+                            class="yellow">clareza</span> e <span class="green">inteligência</span></h1>
+                    <div class="line"></div>
+                    <p>Registre atividades, analise o desenvolvimento de cada criança e gere relatórios pedagógicos em
+                        poucos cliques</p>
                 </div>
-                <div class="botoes">
+                <div class="buttons">
                     <button class="botao-largo">
                         <p>Começar agora</p>
                         <svg>
@@ -43,6 +47,21 @@
             </div>
         </div>
     </main>
+
+    <section id="funcionamento">
+        <div class="top">
+            <h2>Como Funciona</h2>
+            <div class="line"></div>
+        </div>
+        <div class="steps">
+            <my-step color="purple" icon="users" title="Cadastre Alunos"
+                description="Organize suas turmas e cadastre os alunos de forma rápida e prática"></my-step>
+            <my-step color="yellow" icon="atividades" title="Registre Atividades"
+                description="Adicione produções escritas e observações do dia a dia em poucos cliques"></my-step>
+            <my-step color="green" icon="grafevo" title="Acompanhe a Evolução"
+                description="Visualize análises, identifique avanços e gere relatórios automaticamente"></my-step>
+        </div>
+    </section>
 </body>
 
 </html>
