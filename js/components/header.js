@@ -7,10 +7,10 @@ class HeaderPadrao extends HTMLElement {
           </div>
           <div class="botoes">
               <button class="botao-padrao" id= "vazio">
-                  <p>Entrar</p>
+                  <p><a href="login.html">Entrar</a></p>
               </button>
               <button class="botao-padrao">
-                  <p>Criar Conta</p>
+                  <p><a href="register.html">Criar Conta</a></p>
               </button>
           </div>
       `;
