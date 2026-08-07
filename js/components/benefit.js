@@ -11,7 +11,7 @@ class Benefit extends HTMLElement {
         <div class="benefit" style="background-color: var(--${color}-light">
             <div class="circle" style="background-color: var(--${color}-soft)">
                 <svg style="color: var(--${color}-dark)">
-                    <use href="assets/icons/sprite.svg#icon-${icon}"></use>
+                    <use href="../assets/icons/sprite.svg#icon-${icon}"></use>
                 </svg>
             </div>
             <div class="text">

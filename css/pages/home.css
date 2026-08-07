@@ -10,12 +10,12 @@
     height: 2px;
 }
 
-/* Seção Hero / Main */
+
 main {
     position: relative;
     width: 100%;
     aspect-ratio: 1440 / 615;
-    background-image: url("../../imgs/home/Main.png"); /* Ajustado o caminho relativo */
+    background-image: url("../../imgs/home/Main.png");
     background-position: center;
     background-size: cover;
 

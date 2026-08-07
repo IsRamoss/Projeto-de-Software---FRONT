@@ -8,7 +8,7 @@ class Step extends HTMLElement {
           <div class="step">
                 <div class="circle" style="background-color: var(--${color}-light)">
                     <svg style = "color: var(--${color}-dark)">
-                        <use href="assets/icons/sprite.svg#icon-${icon}"></use>
+                        <use href="../assets/icons/sprite.svg#icon-${icon}"></use>
                     </svg>
                 </div>
                 <div class="text">
